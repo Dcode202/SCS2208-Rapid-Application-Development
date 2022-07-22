@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Question 10</title>
+        <style>
+            body{
+                font-family: "Arial";
+            }
+            body p{
+                text-align: center;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto 30vw auto;
+                justify-content: center;
+                align-content: stretch;
+            }
+            .grid-item{
+                grid-column-start: 2;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            input[type=text], input[type=date], #num{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            button{
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type=submit]:hover{
+                background-color: #45a049;
+            }
+            button:hover{
+                background-color: #45a049;
+            }
+            table{
+                border-collapse: collapse;
+                width: 100%;
+                text-align: center;
+            }
+            tr, td, th{
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            td:hover{
+                background-color: #ddd;
+                cursor: pointer;
+            }
+            th{
+                text-align: right;
+            }
+            #result{
+                background-color: coral
+            }
+            #result:hover{
+                background-color: darkslategray;
+                color: white;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <br>
+        <p>Calculator</p><hr><br>
+        <div class="grid-container">
+            <div class="grid-item">
+                <table>
+                    <tr>
+                        <th colspan="4"><input type="text" id="num" value=""></th>
+                    </tr>
+                    <tr style="background-color: floralwhite">
+                        <td onclick="insert('+')">+</td>
+                        <td onclick="insert('-')">-</td>
+                        <td onclick="insert('*')">x</td>
+                        <td onclick="insert('/')">/</td>
+                    </tr>
+                    <tr>
+                        <td onclick="insert('7')">7</td>
+                        <td onclick="insert('8')">8</td>
+                        <td onclick="insert('9')">9</td>
+                        <td rowspan="4" id="result" onclick="equal()">=</td>
+                    </tr>
+                    <tr>
+                        <td onclick="insert('4')">4</td>
+                        <td onclick="insert('5')">5</td>
+                        <td onclick="insert('6')">6</td>
+                    </tr>
+                    <tr>
+                        <td onclick="insert('1')">1</td>
+                        <td onclick="insert('2')">2</td>
+                        <td onclick="insert('3')">3</td>
+                    </tr>
+                    <tr>
+                        <td onclick="insert('0')">0</td>
+                        <td onclick="insert('.')">.</td>
+                        <td onclick="reset()">AC</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function insert(val){
+                    document.getElementById("num").value += val;
+                return val;
+            }
+            function equal(){
+                x = eval(document.getElementById("num").value);
+                document.getElementById("num").value = x;
+                return x;
+            }
+            function reset(){
+                document.getElementById("num").value = "";
+            }
+        </script>
+    </body>
+</html>

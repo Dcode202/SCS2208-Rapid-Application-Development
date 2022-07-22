@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Question 7</title>
+        <style>
+            body{
+                font-family: "Arial";
+            }
+            body p{
+                text-align: center;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto 30vw auto;
+                justify-content: center;
+                align-content: stretch;
+                font-size: 15px;
+            }
+            .grid-item{
+                grid-column-start: 2;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            input[type=text], input[type=date]{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            button{
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type=submit]:hover{
+                background-color: #45a049;
+            }
+            button:hover{
+                background-color: #45a049;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <br>
+        <p>Create a checkbox such as mentioned below. Once an item is checked other items should be disabled. Write down the JS codes to complete the purpose.</p><hr><br>
+        <div class="grid-container">
+            <div class="grid-item">
+                <form>
+                    Available Hotel Packages<br><br>
+                    <input type="checkbox" id="wp" value="wedding" name="p" onclick="sel(this)"> Wedding Package<br>
+                    
+                    <input type="checkbox" id="bp" value="birthday" name="p" onclick="sel(this)"> Birthday Package<br>
+                    
+                    <input type="checkbox" id="np" value="normal" name="p" onclick="sel(this)"> Normal Function Package<br>
+                    
+                    <input type="checkbox" id="dp" value="dayout" name="p" onclick="sel(this)"> Day out Package<br><br>
+                    
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            function sel(selType){
+                var selName = document.getElementsByName(selType.name);
+                var choice = document.getElementById(selType.id);
+
+                if (choice.checked){
+                    for(var i=0; i<selName.length; i++){
+                        if(!selName[i].checked){
+                            selName[i].disabled = true;
+                        }else{
+                            selName[i].disabled = false;
+                        }
+                    } 
+                }
+                else{
+                    for(var i=0; i<selName.length; i++){
+                        selName[i].disabled = false;
+                    } 
+                }    
+            }
+</script>
+    </body>
+</html>

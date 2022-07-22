@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Question 4</title>
+        <style>
+            body{
+                font-family: "Arial";
+            }
+            body p{
+                text-align: center;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto 30vw auto;
+                justify-content: center;
+                align-content: stretch;
+            }
+            .grid-item{
+                grid-column-start: 2;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            input[type=text], input[type=date]{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            button{
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            label{
+                font-size: 15px;
+            }
+            input[type=submit]:hover{
+                background-color: #45a049;
+            }
+            button:hover{
+                background-color: #45a049;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <br>
+        <p>Create a simple form to insert width and height to display the area in the mentioned text field. Create a function using JS to display area in area Text field.</p><hr><br>
+        <div class="grid-container">
+            <div class="grid-item">
+                <form>
+                    <label>Width:</label>
+                    <input type="text" id="width" value="5">
+                    <label>Height:</label>
+                    <input type="text" id="height" value="5">
+                    <button onclick="calArea()" id="x">Find Area</button>
+                    <label id="result"></label>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.querySelector('#x').addEventListener('click', function(event){
+                event.preventDefault();
+            });
+            var h;
+            var w;
+            function calArea(){
+                h = document.getElementById("height").value;
+                w = document.getElementById("width").value;
+                document.getElementById("result").innerHTML = "Area of the rectangle is " + h*w;
+            }
+        </script>
+    </body>
+</html>

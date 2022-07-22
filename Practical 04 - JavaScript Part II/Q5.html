@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Question 5</title>
+        <style>
+            body{
+                font-family: "Arial";
+            }
+            body p{
+                text-align: center;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto 30vw auto;
+                justify-content: center;
+                align-content: stretch;
+            }
+            .grid-item{
+                grid-column-start: 2;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            input[type=text], input[type=date]{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            #x{
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            label{
+                font-size: 15px;
+                background-color: gainsboro;
+                padding: 10px;
+                margin-bottom: 10px;
+                color: blue;
+                border-radius: 4px;
+                padding-right: 83.5%;
+            }
+            dl{
+                font-size: 15px;
+                margin-top: 20px;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <br>
+        <p>Consider the below shown simple form with a button. Write down the JS code to change the button's colour to blue once it is clicked.</p><hr><br>
+        <div class="grid-container">
+            <div class="grid-item">
+                <form>
+                    <h2>Purchase your item</h2>
+                    <label>Free trial</label>
+                    <dl>
+                        <dt>help you to design</dt>
+                        <dt>provide security</dt>
+                        <dt>manage your plans</dt>
+                    </dl>
+                    <button id="x" onclick="myFunction()">Try it now</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            document.querySelector('#x').addEventListener('click', function(event){
+                event.preventDefault();
+            });
+            function myFunction() {
+                document.getElementById("x").style.backgroundColor = "dodgerblue";
+            }
+        </script>
+    </body>
+</html>

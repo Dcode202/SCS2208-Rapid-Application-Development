@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Question 6</title>
+        <style>
+            body{
+                font-family: "Arial";
+            }
+            body p{
+                text-align: center;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto 30vw auto;
+                justify-content: center;
+                align-content: stretch;
+            }
+            .grid-item{
+                grid-column-start: 2;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            input[type=text], input[type=date]{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            button{
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            label{
+                font-size: 15px;
+            }
+            input[type=submit]:hover{
+                background-color: #45a049;
+            }
+            button:hover{
+                background-color: #45a049;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <br>
+        <p>Create a simple form as shown below to insert a number. Write down a JS function to alert square root for inserted numbers.</p><hr><br>
+        <div class="grid-container">
+            <div class="grid-item">
+                <form>
+                    Insert the number 
+                    <input type="text" id="num">
+                    <button onclick="calRoot()" id="x">Find root</button>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.querySelector('#x').addEventListener('click', function(event){
+                event.preventDefault();
+            });
+            function calRoot(){
+                var num = document.getElementById("num").value;
+                alert(Math.sqrt(num));
+            }
+        </script>
+    </body>
+</html>

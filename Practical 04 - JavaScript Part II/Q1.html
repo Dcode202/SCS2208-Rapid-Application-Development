@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Question 1</title>
+        <style>
+            body{
+                font-family: "Arial";
+            }
+            body p{
+                text-align: center;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto 30vw auto;
+                justify-content: center;
+                align-content: stretch;
+            }
+            .grid-item{
+                grid-column-start: 2;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            input[type=text]{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            button{
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            label{
+                font-size: 15px;
+            }
+            button:hover{
+                background-color: #45a049;
+            }
+        </style>
+        <script type="text/javascript">
+            function alertfunc(){
+                var name = document.getElementById("fname").value;
+                var hometown = document.getElementById("htown").value;
+                alert("Name: " + name + "\r\nHometown: " + hometown);
+            }
+        </script>
+    </head>
+    <body>
+        <br>
+        <p>Create a form to insert name and hometown. Once clicked the button alert the name and hometown. Provide the JS code for alert name and hometown.</p><hr><br>
+        <div class="grid-container">
+            <div class="grid-item">
+                <form>
+                    <label>Name:</label>
+                    <input type="text" id="fname" placeholder="Insert a name..">
+                    <label>Hometown:</label>
+                    <input type="text" id="htown" placeholder="Insert home town..">
+                    <button onclick="alertfunc()">Click</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
