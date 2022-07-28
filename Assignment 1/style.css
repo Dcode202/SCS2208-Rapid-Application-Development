@@ -1,0 +1,116 @@
+body{
+    font-family: "Arial";
+    background-color: antiquewhite;
+    background-image: url(rm218-bb-07.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: aliceblue;
+    font-family:"Calibri";
+}
+.grid-container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+    font-weight: 500;
+}
+/*================== DICE ====================*/
+.item2{
+    min-width: 60vw;
+    display: grid;
+    grid-template-columns: 5vw 25vw 25vw 5vw;
+    border: 3px solid rgb(255, 255, 255, 0.5);
+    border-radius: 100px;
+    margin-top: 4vh;
+}
+.s-2-1{
+    grid-column-start: 2;
+}
+.item2 img{
+    width: 30%;
+    margin: 1rem;
+}
+#dice1-2, #dice1-3, #dice1-4, #dice1-5, #dice1-6, #dice2-2, #dice2-3, #dice2-4, #dice2-5, #dice2-6{
+    display: none;
+}
+/*================== MID ====================*/
+h2{
+    margin-top: 2rem;
+    font-weight: 400;
+}
+button{
+    width: 30%;
+    background-color:darkcyan;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+button:hover{
+    background-color:rgb(50, 140, 200);
+}
+/*================= PLAYER MARKS ===============*/
+.item3{
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 25vw 25vw;
+    margin-top: 4vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    color: mediumpurple;
+}
+.item3 img{
+    width: 50%;
+    margin: 1rem;
+}
+.s-3-1{
+    display: grid;
+    grid-template-columns: 100% 80%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin-right: 1rem;
+}
+.s-3-2{
+    display: grid;
+    grid-template-columns: 80% 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 30px;
+    border-radius: 30px;
+    margin-left: 1rem;
+}
+.p1-details{
+    text-align: left;
+    margin-left: -4rem;
+}
+.p2-details{
+    text-align: right;
+    margin-right: -4rem;
+}
+/*===================== FOOTER ==================*/
+footer{
+    margin-top: 4rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: none;
+    color: darkgray;
+}

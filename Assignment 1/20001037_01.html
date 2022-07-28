@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Roll a Dice Game</title>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item item1">
+                <br>
+                <h1>ROLL A DICE GAME</h1>
+            </div>
+            <div class="grid-item item2">
+                <div class="item2-subgrid s-2-1">
+                    <img src="Dice_Images/dice_1.png" id="dice1-1"/>
+                    <img src="Dice_Images/dice_2.png" id="dice1-2"/>
+                    <img src="Dice_Images/dice_3.png" id="dice1-3"/>
+                    <img src="Dice_Images/dice_4.png" id="dice1-4"/>
+                    <img src="Dice_Images/dice_5.png" id="dice1-5"/>
+                    <img src="Dice_Images/dice_6.png" id="dice1-6"/>
+                </div>
+                <div class="item2-subgrid s-2-2">
+                    <img src="Dice_Images/dice_1.png" id="dice2-1"/>
+                    <img src="Dice_Images/dice_2.png" id="dice2-2"/>
+                    <img src="Dice_Images/dice_3.png" id="dice2-3"/>
+                    <img src="Dice_Images/dice_4.png" id="dice2-4"/>
+                    <img src="Dice_Images/dice_5.png" id="dice2-5"/>
+                    <img src="Dice_Images/dice_6.png" id="dice2-6"/>
+                </div>
+            </div>
+            <h2 id="player">Player 1's Turn</h2>
+            <center><button id="roll" onclick="startGame()">Roll</button></center>
+            <div class="grid-item item3">
+                <div class="item3-subgrid s-3-1">
+                    <div class="p1-image">
+                        <img src="chibi_avatar___akiyama_mio_by_mrtapoz_kun_dcmkj95-fullview.png" id="p1"/>
+                    </div>
+                    <div class="p1-details">
+                        <label>Player 1: Total</label><br>
+                        <label style="font-size: 85px;" id="p1Marks">0</label>
+                    </div>
+                </div>
+                <div class="item3-subgrid s-3-2">
+                    <div class="p2-details">
+                        <label>Player 2: Total</label><br>
+                        <label style="font-size: 85px;" id="p2Marks">0</label>
+                    </div>
+                    <div class="p2-image">
+                        <img src="chibi_avatar___platelet_by_mrtapoz_kun_dcmkkei-fullview.png" id="p2"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <br>
+            &copy;2022 by Dilky Liyanage | All Rights Reserved.
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
