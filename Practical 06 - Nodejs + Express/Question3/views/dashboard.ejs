@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Dashboard</title>
+
+</head>
+
+<body>
+
+  <!-- ======= Gallery Section ======= -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Gallery</h2>
+      </div>
+
+      <div class="row g-0" data-aos="fade-left">
+
+        <% for (let i = 0; i < imgArray.length; i++) { %>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="<%= (i*50)+150 %>">
+            <a href="/gallery/<%= imgArray[i].imagename %>" class="gallery-lightbox">
+              <img src="/gallery/<%= imgArray[i].imagename %>" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <% } %>
+
+      </div>
+
+    </div>
+  </section><!-- End Gallery Section -->
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="/stylesheets/main/purecounter/purecounter_vanilla.js"></script>
+  <script src="/stylesheets/main/aos/aos.js"></script>
+  <script src="/stylesheets/main/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/stylesheets/main/glightbox/js/glightbox.min.js"></script>
+  <script src="/stylesheets/main/swiper/swiper-bundle.min.js"></script>
+  <script src="/stylesheets/main/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/javascripts/main.js"></script>
+
+</body>
+
+</html>
