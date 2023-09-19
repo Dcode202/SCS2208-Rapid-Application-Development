@@ -1,2 +1,2 @@
-# SCS2208-Rapid-Application-Development
-RAD Assignments
+# Dice Game
+Rapid Application Development
